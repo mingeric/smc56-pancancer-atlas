@@ -48,11 +48,19 @@ Official symbols, identifiers, aliases, assay platform and annotation build must
 - Missing data are never filled with synthetic panels; every blocker is logged, and any reconstructed equation is marked as a **new operational definition**, not a transcription of the original.
 - Machine learning splits by donor/study to avoid leakage; survival needs validation; drug sensitivity is never phrased as a treatment recommendation.
 
-## Figure architecture
+## Figure architecture — question-driven
 
-- **Figure 1 (A–T):** ten genes, canonical and alternative modules — the exhaustive single-cell atlas.
-- **Figure 2 (A–T):** pan-cancer differences, function, and evidence.
-- **Figures 3–7 (as data permit):** normal-tissue baseline → tumor deviation; bulk RNA + proteomics convergence; immune / stromal / spatial context; prognosis and drug sensitivity; optional comparative mechanistic synthesis.
+Every main panel is tagged with the scientific question it answers (see **§0 Core scientific questions** in `SKILL.md`): **Q1** CNV-driven overexpression · **Q2** NSMCE2 in BRCA · **Q3** topoisomerase-mutation × Smc5/6 binding · **Q4** EID3 vs NSMCE4A · **Q5** cell/cancer-type distribution · **Q6** cross-species conservation · **Q7** immunotherapy biomarker · **Q8** donor-robust vs fragile associations · **M** module/signature quantification.
+
+- **Figure 1 (A–T):** exhaustive single-cell atlas → Q4, Q5, M.
+- **Figure 2 (A–U):** pan-cancer expression, drivers & evidence, incl. new **CNV-vs-expression (Q1)**, **BRCA/NSMCE2 (Q2)**, and **cell- vs donor-level significance (Q8)** panels.
+- **Figure 3:** normal-tissue baseline → tumor deviation.
+- **Figure 4:** bulk + proteomics convergence, CNA/mutation, TOP-mutant occupancy (Q3).
+- **Figure 5:** mechanism, **cross-species conservation (Q6)**, recruitment routes.
+- **Figure 6:** immune microenvironment & **immunotherapy biomarker (Q7)**.
+- **Figure 7 (optional):** prognosis, drug sensitivity, synthesis (Q8).
+
+Total: **50+ science-facing panels**, each traceable to a `Q`-id; supplements carry QC, sensitivity, and full stats.
 
 Production standard: white background, restrained low-saturation colorblind-safe palette, **≥8 pt at print size**, no clipping, valid colorbars, one takeaway per panel, high-resolution **600 dpi** PNG plus vector PDF/SVG. The skill explicitly warns against squeezing 20 complex panels into a ~183 mm single page and requires multi-page, readable editorial layouts instead. Supplements carry QC, sensitivity analyses, and full statistical tables.
 
@@ -73,7 +81,7 @@ The skill **executes against your local research data**; it defines the workflow
 ## Repository layout
 
 ```text
-SKILL.md      # complete skill specification (verbatim original, 239 lines)
+SKILL.md      # complete skill specification (question-driven rewrite, ~216 lines)
 README.md     # this overview
 LICENSE       # MIT
 .gitignore    # keeps generated research outputs out of version control
