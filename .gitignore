@@ -1,0 +1,38 @@
+# Generated research outputs (see SKILL.md §10: SMC56_FINAL/ project tree)
+SMC56_FINAL/
+archive_previous/
+*.h5ad
+*.h5
+*.loom
+*.mtx
+*.h5mu
+
+# Figures and vector sources produced by the skill; keep sources out of git
+*.png
+*.jpg
+*.jpeg
+*.pdf
+*.svg
+*.eps
+
+# Tables / results can be large; track them explicitly if needed
+*.xlsx
+*.tsv
+*.csv
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# Python / notebooks
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Logs and scratch
+*.log
+*.tmp
+tmp/
