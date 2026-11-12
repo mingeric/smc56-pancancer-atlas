@@ -83,4 +83,4 @@ LICENSE       # MIT
 
 MIT — see [`LICENSE`](LICENSE). Copyright (c) 2026 mingeric.
 
-If you use this skill in a publication, please cite the repository and acknowledge the underlying data sources (TCGA, GTEx, CP TAC, DepMap, ICGC, GDSC, CCLE, etc.) according to their own terms.
+If you use this skill in a publication, please cite the repository and acknowledge the underlying data sources (TCGA, GTEx, CPTAC, DepMap, ICGC, GDSC, CCLE, etc.) according to their own terms.
